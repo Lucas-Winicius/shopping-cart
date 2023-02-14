@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import Home from './pages/Home'
 import Cart from './pages/Cart'
+import './styles/main.css'
 
 const router = createBrowserRouter([{
   path: '/',

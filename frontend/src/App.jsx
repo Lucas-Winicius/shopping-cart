@@ -1,13 +1,14 @@
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import { useState } from 'react'
+import NavBar from './components/NavBar'
 
 function App() {
 
+  const [cart, setCart] = useState([])
+
   return (
     <div className="App">
-      <header>
-        <Link to="/">Home</Link>
-        <Link to="/cart">Carrinho</Link>
-      </header>
+      <NavBar cartLength={cart.length} />
       <Outlet />
       <footer>Footer</footer>
     </div>

@@ -1,0 +1,49 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: #262626;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 3px solid #8685ef;
+    margin-bottom: 10px;
+}
+
+header .link {
+    color: honeydew;
+    font-size: 1.5em;
+}
+
+header .title {
+    font-weight: bolder;
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
+}
+
+.dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 0.8em;
+
+    position: relative;
+    top: -9px;
+    right: 11px;
+}
+
+.cartLink {
+    display: flex;
+    transition: 500ms;
+}
+
+.cartLink:hover {
+    scale: 1.17;
+    transform: rotate(-13deg);
+}
+  
