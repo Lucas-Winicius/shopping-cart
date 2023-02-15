@@ -4,24 +4,35 @@
             "name": "Produto 1",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
             "price": 100.50,
+            "discount": false,
             "imageUrl": "https://i.imgur.com/ulJeQyt.png"
         },
         {
             "name": "Produto 2",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
             "price": 50.5,
+            "discount": false,
             "imageUrl": "https://i.imgur.com/ulJeQyt.png"
         },
         {
             "name": "Produto 3",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
             "price": 50,
+            "discount": true,
             "imageUrl": "https://i.imgur.com/ulJeQyt.png"
         },
         {
             "name": "Produto 4",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
             "price": 50,
+            "discount": false,
+            "imageUrl": "https://i.imgur.com/ulJeQyt.png"
+        },
+        {
+            "name": "Produto 5",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+            "price": 199.8,
+            "discount": true,
             "imageUrl": "https://i.imgur.com/ulJeQyt.png"
         }
     ]
