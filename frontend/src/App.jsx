@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { useState } from 'react'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
       <NavBar cartLength={cart.length} />
       <Outlet />
-      <footer>Footer</footer>
+      <Footer />
     </div>
   )
 }

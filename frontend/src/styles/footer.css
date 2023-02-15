@@ -5,6 +5,7 @@ footer {
     padding: 10px;
     justify-content: end;
     border-top: 3px solid #8685ef;
+    user-select: none;
 }
 
 footer > p {

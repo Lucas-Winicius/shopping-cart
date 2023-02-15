@@ -4,10 +4,10 @@ import '../styles/header.css'
 
 const NavBar = ({ cartLength }) => (
     <header>
-        <Link to="/" class='link title'>Shopping Cart</Link>
+        <Link to="/" className='link title'>Shopping Cart</Link>
         <Link to="/cart">
                 <span className='cartLink'>
-                    <FaShoppingCart class='link' />
+                    <FaShoppingCart className='link' />
                     {cartLength > 0 && 
                     <span className='dot'>
                         {cartLength > 99 ? ":D" : cartLength}
