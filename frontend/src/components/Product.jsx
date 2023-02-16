@@ -2,8 +2,6 @@ import "../styles/product.css"
 import { FaCartPlus } from "react-icons/fa"
 
 const Product = ({ name, description, price, discountPrice, discount, imageUrl, index }) => {
-
-    onclick = e => console.log(e.target.value)
     
     return (
         <div className="productContainer">

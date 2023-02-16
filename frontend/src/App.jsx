@@ -8,6 +8,16 @@ function App() {
   const [ products, setProducts ] = useState([])
   const [ cart, setCart ] = useState([])
 
+  onclick = e => {
+    if(e.target.classList.contains('buy')) {
+      const el = e.target
+      const product = products[el.value]
+      const cartItems = [...cart]
+      cartItems.push(product)
+      setCart(cartItems)
+    }
+  }
+
   useEffect(() => {
       fetch('https://lucas-winicius.github.io/shopping-cart/backend/db.json')
           .then(response => response.json())
