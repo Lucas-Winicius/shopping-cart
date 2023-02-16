@@ -1,0 +1,21 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.errorText {
+    font-size: 1.7em;
+    font-weight: bolder;
+    user-select: none;
+    pointer-events: none;
+    color: rgb(45, 45, 45);
+    padding: 0px 50px;
+}
+
+.zzz {
+    color: rgb(255, 179, 0);
+    text-shadow: 1px 1px 1px black;
+}
