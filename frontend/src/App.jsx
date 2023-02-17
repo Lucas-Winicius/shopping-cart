@@ -19,6 +19,7 @@ function App() {
 
   const [ products, setProducts ] = useState([])
   const [ cart, setCart ] = useState([])
+  // [{"name":"Produto 1","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":100.5,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":9},{"name":"Produto 2","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50.5,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":10},{"name":"Produto 3","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50,"discountPrice":10.5,"discount":true,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":13},{"name":"Produto 4","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":7},{"name":"Produto 5","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":199.8,"discountPrice":10.5,"discount":true,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":1}]
 
   onclick = e => {
     if(e.target.classList.contains('buy')) {
@@ -31,6 +32,7 @@ function App() {
       else cartItems.push(product)
 
       setCart(cartItems)
+      console.log(JSON.stringify(cart))
     }
   }
 
