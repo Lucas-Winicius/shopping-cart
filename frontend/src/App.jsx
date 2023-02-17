@@ -5,6 +5,18 @@ import Footer from './components/Footer'
 
 function App() {
 
+  function thisProductExists(product, array) {
+    const quanty = product.quanty || 0
+    product.quanty && delete product.quanty
+    const includes = Array.from(array).includes(product)
+    const index = Array.from(array).indexOf(product)
+
+    product.quanty = quanty
+    product.quanty++
+
+    return { includes, index, product }
+  }
+
   const [ products, setProducts ] = useState([])
   const [ cart, setCart ] = useState([])
 
@@ -13,7 +25,11 @@ function App() {
       const el = e.target
       const product = products[el.value]
       const cartItems = [...cart]
-      cartItems.push(product)
+      const exists = thisProductExists(product, cartItems)
+
+      if(exists.includes) cartItems[exists.index] = exists.product
+      else cartItems.push(product)
+
       setCart(cartItems)
     }
   }

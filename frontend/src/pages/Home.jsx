@@ -5,16 +5,17 @@ import "../styles/home.css"
 const Home = () => {
     document.title = 'Home'
 
-    const outlet = useOutletContext();
+    const {products} = useOutletContext();
 
     return (
         <section>
             {
-                outlet.products.length == 0 && <p className="errorText">Algo parece vazio por aqui. Tente novamente mais tarde.</p>
+                products.length == 0 &&
+                <p className="errorText">Algo parece vazio por aqui. Tente novamente mais tarde.</p>
             }
             {
-                !outlet.products.length == 0 && 
-                Array.from(outlet.products).map(({ name, description, price, discountPrice, discount, imageUrl }, index) => 
+                !products.length == 0 &&
+                Array.from(products).map(({ name, description, price, discountPrice, discount, imageUrl }, index) => 
                 <Product 
                     name={name} 
                     description={description} 
