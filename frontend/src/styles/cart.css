@@ -1,0 +1,34 @@
+.emptyCart {
+    height: calc(100vh - 118px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyCart p {
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.9em;
+    border: 1px solid #bebebe;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 12px 0px #0000003c;
+    user-select: none;
+    color: rgb(56, 56, 56);
+}
+
+.emptyCart p:active {
+    transition: 0s;
+    outline: 2px solid rgb(0, 140, 255);
+    background-color: whitesmoke;
+}
+
+.emptyCart p:hover {
+    transform: scale(1.03);
+}
+
+.emptyCart p #cartAdd {
+    margin-right: 10px;
+}
