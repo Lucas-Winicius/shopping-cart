@@ -1,9 +1,7 @@
 {
     "routes": [
       { "src": "/", "dest": "/" },
-      { "src": "/cart", "dest": "/" }
-    ],
-    "rewrites":  [
-      {"source": "/(.*)", "destination": "/"}
+      { "src": "/cart", "dest": "/" },
+      { "src": "/[^.]+", "dest": "/" } 
     ]
 }
