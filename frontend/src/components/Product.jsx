@@ -1,5 +1,6 @@
 import "../styles/product.css"
 import { FaCartPlus } from "react-icons/fa"
+import { MdOutlineAddShoppingCart } from "react-icons/md"
 
 const Product = ({ name, description, price, discountPrice, discount, imageUrl, index }) => {
     
@@ -16,7 +17,7 @@ const Product = ({ name, description, price, discountPrice, discount, imageUrl, 
                 </p> : 
                 <p className="price">R$ { price }</p>
             }
-            <button className="buy" value={index}>Comprar</button>
+            <button className="buy" value={index}><MdOutlineAddShoppingCart className="addCart"/> | Comprar</button>
         </div>
     )
 }

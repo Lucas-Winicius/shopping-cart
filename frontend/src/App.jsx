@@ -33,6 +33,7 @@ function App() {
 
       setCart(cartItems)
       console.log(JSON.stringify(cart))
+      document.body.focus()
     }
   }
 
