@@ -8,18 +8,18 @@ const Cart = () => {
     document.title = 'Carrinho'
 
     const {cart} = useOutletContext();
-    const cartItem = Array.from(cart)
+    const cartItems = Array.from(cart)
 
     return (
         <div className="cart">
             <div className="products">
                 {
-                    cartItem.length > 0 && cartItem
+                    cartItems.length > 0 && cartItems
                         .map((cartItem, index) => (
-                            <CartProduct props={cartItem} key={index}/>
+                            <CartProduct product={cartItem} cartIndex={index} key={index}/>
                         ))
                 }{
-                    cartItem.length <= 0 && 
+                    cartItems.length <= 0 && 
                     <div className="emptyCart">
                         <Link to="/">
                         <p><MdOutlineAddShoppingCart id="cartAdd"/> Adicione um produto</p>
