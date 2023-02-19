@@ -4,6 +4,8 @@ import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 
 function App() {
+  const [ products, setProducts ] = useState([])
+  const [ cart, setCart ] = useState([{"name":"Produto 1","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":100.5,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":9},{"name":"Produto 2","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50.5,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":10},{"name":"Produto 3","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50,"discountPrice":10.5,"discount":true,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":13},{"name":"Produto 4","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":7},{"name":"Produto 5","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":199.8,"discountPrice":10.5,"discount":true,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":1}])
 
   function thisProductExists(product, array) {
     const quanty = product.quanty || 0
@@ -17,15 +19,19 @@ function App() {
     return { includes, index, product }
   }
 
-  const [ products, setProducts ] = useState([])
-  const [ cart, setCart ] = useState([])
-  // [{"name":"Produto 1","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":100.5,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":9},{"name":"Produto 2","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50.5,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":10},{"name":"Produto 3","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50,"discountPrice":10.5,"discount":true,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":13},{"name":"Produto 4","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":7},{"name":"Produto 5","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":199.8,"discountPrice":10.5,"discount":true,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":1}]
+  function changeQuanty(product, add) {
+    product.quanty = add ? product.quanty + 1 : product.quanty - 1
+
+    return product
+  }
 
   onclick = e => {
-    if(e.target.classList.contains('buy')) {
-      const el = e.target
+    const el = e.target
+    const parent = el.parentElement
+    const cartItems = [...cart]
+
+    if(el.classList.contains('buy')) {
       const product = products[el.value]
-      const cartItems = [...cart]
       const exists = thisProductExists(product, cartItems)
 
       if(exists.includes) cartItems[exists.index] = exists.product
@@ -35,6 +41,19 @@ function App() {
       console.log(JSON.stringify(cart))
       document.body.focus()
     }
+
+    if(parent.classList.contains('quantyContainer')) {
+      const productID = parent.attributes.value.nodeValue
+      const product = cartItems[productID]
+      let newProduct;
+
+      if(el.classList.contains('addQuanty')) newProduct = changeQuanty(product, true)
+      if(el.classList.contains('removeQuanty')) newProduct = changeQuanty(product, false)
+
+      cartItems[productID] = newProduct
+      setCart(cartItems)
+    }
+
   }
 
   useEffect(() => {
