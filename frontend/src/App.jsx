@@ -51,6 +51,9 @@ function App() {
       if(el.classList.contains('removeQuanty')) newProduct = changeQuanty(product, false)
 
       cartItems[productID] = newProduct
+
+      if(newProduct.quanty <= 0) cartItems.splice(productID, 1)
+
       setCart(cartItems)
     }
 
