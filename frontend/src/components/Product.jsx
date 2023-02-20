@@ -11,10 +11,10 @@ const Product = props => {
             {
                 props.discount ? 
                 <p className="priceContainer">
-                    <span className="priceAfter">R$ { props.price }</span>
-                    <span className="priceNow">R$ { props.discountPrice }</span>
+                    <span className="priceAfter">R$ { props.price.toFixed(2) }</span>
+                    <span className="priceNow">R$ { props.discountPrice.toFixed(2) }</span>
                 </p> : 
-                <p className="price">R$ { props.price }</p>
+                <p className="price">R$ { props.price.toFixed(2) }</p>
             }
             <button className="buy" value={ props.index }><MdOutlineAddShoppingCart className="addCart"/> | Comprar</button>
         </div>
