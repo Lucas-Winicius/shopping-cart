@@ -12,22 +12,27 @@ const Cart = () => {
 
     return (
         <div className="cart">
-            <div className="products">
-                {
-                    cartItems.length > 0 && cartItems
-                        .map((cartItem, index) => (
-                            <CartProduct product={cartItem} cartIndex={index} key={index}/>
-                        ))
-                }{
-                    cartItems.length <= 0 && 
+
+            {
+                cartItems.length > 0 && (
+                    <>
+                        <div className="products">{cartItems
+                            .map((cartItem, index) => (
+                                <CartProduct product={cartItem} cartIndex={index} key={index}/>))}
+                        </div>
+                        <div className="products">Teste</div>
+                    </>
+                )
+            }
+
+            {
+                cartItems.length <= 0 && 
                     <div className="emptyCart">
                         <Link to="/">
-                        <p><MdOutlineAddShoppingCart id="cartAdd"/> Adicione um produto</p>
+                            <p><MdOutlineAddShoppingCart id="cartAdd"/> Adicione um produto</p>
                         </Link>
                     </div>
-                }
-            </div>
-            <div className="prices"></div>
+            }
         </div>
     )
 }

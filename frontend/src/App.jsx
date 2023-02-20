@@ -5,11 +5,13 @@ import Footer from './components/Footer'
 
 function App() {
   const [ products, setProducts ] = useState([])
-  const [ cart, setCart ] = useState([{"name":"Produto 1","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":100.5,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":9},{"name":"Produto 2","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50.5,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":10},{"name":"Produto 3","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50,"discountPrice":10.5,"discount":true,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":13},{"name":"Produto 4","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":50,"discountPrice":10.5,"discount":false,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":7},{"name":"Produto 5","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit","price":199.8,"discountPrice":10.5,"discount":true,"imageUrl":"https://i.imgur.com/ulJeQyt.png","quanty":1}])
+  const [ cart, setCart ] = useState([])
 
   function thisProductExists(product, array) {
+
     const quanty = product.quanty || 0
     product.quanty && delete product.quanty
+
     const includes = Array.from(array).includes(product)
     const index = Array.from(array).indexOf(product)
 
@@ -21,7 +23,6 @@ function App() {
 
   function changeQuanty(product, add) {
     product.quanty = add ? product.quanty + 1 : product.quanty - 1
-
     return product
   }
 
@@ -38,7 +39,6 @@ function App() {
       else cartItems.push(product)
 
       setCart(cartItems)
-      console.log(JSON.stringify(cart))
       document.body.focus()
     }
 
@@ -65,7 +65,7 @@ function App() {
           .then(products => products.produtos)
           .then(data => setProducts([...data]))
           .catch(error => console.error(error))
-          .finally(() => console.log("Fim da requisição."))
+          .finally(() => console.log("Requisição finalizada."))
   }, [])
 
   return (

@@ -1,23 +1,22 @@
 import "../styles/product.css"
-import { FaCartPlus } from "react-icons/fa"
 import { MdOutlineAddShoppingCart } from "react-icons/md"
 
-const Product = ({ name, description, price, discountPrice, discount, imageUrl, index }) => {
+const Product = props => {
     
     return (
         <div className="productContainer">
-            <h1 className="productName">{ name }</h1>
-            <img src={imageUrl} alt={name} className="image" />
-            <p className="description">{description}</p>
+            <h1 className="productName">{ props.name }</h1>
+            <img src={ props.imageUrl } alt={ props.name } className="image" />
+            <p className="description">{ props.description }</p>
             {
-                discount ? 
+                props.discount ? 
                 <p className="priceContainer">
-                    <span className="priceAfter">R$ {price}</span>
-                    <span className="priceNow">R$ {discountPrice}</span>
+                    <span className="priceAfter">R$ { props.price }</span>
+                    <span className="priceNow">R$ { props.discountPrice }</span>
                 </p> : 
-                <p className="price">R$ { price }</p>
+                <p className="price">R$ { props.price }</p>
             }
-            <button className="buy" value={index}><MdOutlineAddShoppingCart className="addCart"/> | Comprar</button>
+            <button className="buy" value={ props.index }><MdOutlineAddShoppingCart className="addCart"/> | Comprar</button>
         </div>
     )
 }

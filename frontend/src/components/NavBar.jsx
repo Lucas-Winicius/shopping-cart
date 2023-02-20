@@ -9,9 +9,9 @@ const NavBar = ({ cartLength }) => (
                 <span className='cartLink'>
                     <FaShoppingCart className='link' />
                     {cartLength > 0 && 
-                    <span className='dot'>
-                        {cartLength > 99 ? ":D" : cartLength}
-                    </span>
+                        <span className='dot'>
+                            {cartLength > 99 ? ":D" : cartLength}
+                        </span>
                     }
                 </span>
         </Link>
