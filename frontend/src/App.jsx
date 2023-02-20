@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 
 function App() {
   const [ products, setProducts ] = useState([])
-  const [ cart, setCart ] = useState([{}])
+  const [ cart, setCart ] = useState([])
 
   function thisProductExists(product, array) {
 
