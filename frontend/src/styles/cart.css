@@ -7,6 +7,8 @@
     margin: 10px;
 }
 
+
+
 .emptyCart {
     min-height: calc(100vh - 118px);
     width: 100%;
@@ -65,12 +67,12 @@
     margin-top: 10px;
     height: 30px;
     width: 100%;
-    max-width: 300px;
+    /* max-width: 300px; */
     background-color: rgb(133, 28, 212);
     border: none;
     color: white;
     font-weight: bolder;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: .5s;
 }

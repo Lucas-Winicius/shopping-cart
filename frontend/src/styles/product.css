@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 20vw;
+    max-width: 350px;
     min-height: 385px;
     cursor: pointer;
     border: 1px solid rgb(201, 201, 201);

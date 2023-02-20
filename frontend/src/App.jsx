@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 
 function App() {
   const [ products, setProducts ] = useState([])
-  const [ cart, setCart ] = useState([])
+  const [ cart, setCart ] = useState([{}])
 
   function thisProductExists(product, array) {
 
@@ -56,6 +56,7 @@ function App() {
       if(newProduct.quanty <= 0) cartItems.splice(productID, 1)
 
       setCart(cartItems)
+      console.log(JSON.stringify(cartItems))
     }
 
   }
