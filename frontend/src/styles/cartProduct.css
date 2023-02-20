@@ -1,4 +1,76 @@
 .cartProduct {
-    width: 100%;
+    display: flex;
+    width: max-content;
     border: 1px solid rgb(206, 206, 206);
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6vw;
+}
+
+.imageContainer > img {
+    width: 100%;
+    margin: auto;
+}
+
+.productInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 10px;
+    overflow: hidden;
+    width: 50vw;
+}
+
+.productInfo > p {
+    display: block;
+    width: 100%;
+    text-align: justify;
+}
+
+.productInfo > .productName {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.productInfo > .productDescription {
+    font-size: .8em;
+}
+
+.productInfo > .productPrice {
+    font-weight: bold;
+}
+
+.quanty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quanty input {
+    width: 40px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    pointer-events: none;
+}
+
+.quanty button {
+    width: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.quanty > span {
+    border: .5px solid rgb(218, 218, 218);
 }

@@ -1,5 +1,9 @@
+.cart {
+    min-height: calc(100vh - 118px);
+}
+
 .emptyCart {
-    height: calc(100vh - 118px);
+    min-height: calc(100vh - 118px);
     display: flex;
     justify-content: center;
     align-items: center;

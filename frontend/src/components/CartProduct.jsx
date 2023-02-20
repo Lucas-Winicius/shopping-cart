@@ -8,9 +8,9 @@ const CartProduct = ({product, cartIndex}) => {
                 <img src={product.imageUrl} alt={product.name} />
             </div>
             <div className="productInfo">
-                <p>{ product.name }</p>
-                <p>{ product.description }</p>
-                <p>{ product.price }</p>
+                <p className="productName">{ product.name }</p>
+                <p className="productDescription">{ product.description }</p>
+                <p className="productPrice">R$ { product.discount ? product.discountPrice : product.price }</p>
             </div>
             <div className="quanty">
                 <span className="quantyContainer" value={cartIndex}>
