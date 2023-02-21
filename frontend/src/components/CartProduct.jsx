@@ -10,7 +10,7 @@ const CartProduct = ({product, cartIndex}) => {
             <div className="productInfo">
                 <p className="productName">{ product.name }</p>
                 <p className="productDescription">{ product.description }</p>
-                <p className="productPrice">R$ { product.discount ? product.discountPrice : product.price }</p>
+                <p className="productPrice">R$ { product.discount ? product.discountPrice.toFixed(2) : product.price.toFixed(2) }</p>
             </div>
             <div className="quanty">
                 <span className="quantyContainer" value={cartIndex}>
