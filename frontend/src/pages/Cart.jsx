@@ -25,8 +25,6 @@ const Cart = () => {
     const cartItems = Array.from(cart)
     const amountToPay = reducer(cartItems)
 
-    console.log(amountToPay)
-
     return (
         <div className="cart">
 
