@@ -1,18 +1,18 @@
-<h1>Shopping Cart</h1>
-<img src="https://i.imgur.com/uuzttAI.gif"/>
+# Shopping Cart
+![Preview](https://i.imgur.com/uuzttAI.gif)
 
-<h2>What I've learned?</h2>
-<p>With this project, I improved my skills in using <b>useEffect</b>, <b>useState</b>, and the <b>React Router library</b>.</p>
+## What I've learned?
+With this project, I improved my skills in using **useEffect**, **useState**, and the **React Router library**.
 
-<h2>Link</h2>
-<p>To access my project, click on the following link: https://shopping-cart-five-tawny.vercel.app/</p>
+## Link
+To access my project, click on the following link: https://shopping-cart-five-tawny.vercel.app/
 
-<h2>Built with:</h2>
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-<img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router">
+## Built with:
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-<h2>Did you like it?</h2>
-<p>Give us your opinion on my Instagram and/or a star on this repository.</p>
+## Did you like it?
+Give us your opinion on my Instagram and/or a star on this repository.
 
 <hr/>
 <a href="https://instagram.com/sr_pumpkin_"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
