@@ -1,5 +1,5 @@
 # Shopping Cart
-![Preview](https://i.imgur.com/uuzttAI.gif)
+![Preview](https://i.imgur.com/oYh3V08.png)
 
 ## What I've learned?
 With this project, I improved my skills in using **useEffect**, **useState**, and the **React Router library**.
