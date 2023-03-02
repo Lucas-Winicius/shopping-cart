@@ -1,5 +1,5 @@
 .cart {
-    min-height: calc(100vh - 118px);
+    min-height: calc(100vh - 138px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -50,18 +50,24 @@
     max-width: 500px;
 }
 
-.prices > h1 {
+.pricesContainer {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+}
+
+.prices > .pricesContainer > h1 {
     text-align: center;
 }
 
-.prices > p {
+.prices > .pricesContainer > p {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     border-bottom: 2px solid rgb(219, 218, 218);
 }
 
-.prices > button {
+.prices > .pricesContainer > button {
     display: block;
     margin: auto;
     margin-top: 10px;
@@ -80,3 +86,10 @@
 .prices > button:hover {
     background-color: rgb(98, 25, 155);
 }
+/* 
+.products {
+    max-height: 70vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-right: 10px;
+} */

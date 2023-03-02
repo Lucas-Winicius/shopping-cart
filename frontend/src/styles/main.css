@@ -52,6 +52,12 @@
 
 @media (max-width: 550px) {
     .productContainer {
+        width: 45vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .productContainer {
         width: 100vw;
     }
 }

@@ -36,20 +36,23 @@ const Cart = () => {
                                 <CartProduct product={cartItem} cartIndex={index} key={index}/>))}
                         </div>
                         <div className="prices">
-                            <h1 className="title">Resumo do pedido</h1>
-                            <p className="fullPrice">
-                                <span>Total</span>
-                                <span>R$ {amountToPay.totalPrice.toFixed(2)}</span>
-                            </p>
-                            <p className="discount">
-                                <span>Desconto</span>
-                                <span>R$ {amountToPay.discount.toFixed(2)}</span>
-                            </p>
-                            <p>
-                                <span>Preço Final</span>
-                                <span>R$ {amountToPay.discountPrice.toFixed(2)}</span>
-                            </p>
-                            <button>Comprar</button>
+                            <div className="pricesContainer">
+                            
+                                <h1 className="title">Resumo do pedido</h1>
+                                <p className="fullPrice">
+                                    <span>Total</span>
+                                    <span>R$ {amountToPay.totalPrice.toFixed(2)}</span>
+                                </p>
+                                <p className="discount">
+                                    <span>Desconto</span>
+                                    <span>R$ {amountToPay.discount.toFixed(2)}</span>
+                                </p>
+                                <p>
+                                    <span>Preço Final</span>
+                                    <span>R$ {amountToPay.discountPrice.toFixed(2)}</span>
+                                </p>
+                                <button>Comprar</button>
+                        </div>
                         </div>
                     </>
                 )
