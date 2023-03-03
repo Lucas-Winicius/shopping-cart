@@ -31,7 +31,7 @@ function App() {
     const parent = el.parentElement
     const cartItems = [...cart]
 
-    el.blur();
+    setTimeout(() => el.blur(), 1.5 * 1000);
 
     if(el.classList.contains('buy')) {
       const product = products[el.value]
