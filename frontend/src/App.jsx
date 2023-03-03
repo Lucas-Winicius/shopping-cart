@@ -31,6 +31,8 @@ function App() {
     const parent = el.parentElement
     const cartItems = [...cart]
 
+    if (document.activeElement) document.activeElement.blur();
+
     if(el.classList.contains('buy')) {
       const product = products[el.value]
       const exists = thisProductExists(product, cartItems)
@@ -39,36 +41,36 @@ function App() {
       else cartItems.push(product)
 
       setCart(cartItems)
-      document.body.focus()
       console.log(JSON.stringify(cartItems))
     }
-
+    
     if(parent.classList.contains('quantyContainer')) {
       const productID = parent.attributes.value.nodeValue
       const product = cartItems[productID]
       let newProduct;
-
+      
       if(el.classList.contains('addQuanty')) newProduct = changeQuanty(product, true)
       if(el.classList.contains('removeQuanty')) newProduct = changeQuanty(product, false)
 
       cartItems[productID] = newProduct
-
+      
       if(newProduct.quanty <= 0) cartItems.splice(productID, 1)
-
+      
       setCart(cartItems)
       console.log(JSON.stringify(cartItems))
     }
-
+    
+    
   }
 
   useEffect(() => {
       fetch('https://lucas-winicius.github.io/shopping-cart/backend/db.json')
-          .then(response => response.json())
-          .then(products => products.produtos)
-          .then(data => setProducts([...data]))
-          .catch(error => console.error(error))
-          .finally(() => console.log("Requisição finalizada."))
-  }, [])
+      .then(response => response.json())
+      .then(products => products.produtos)
+      .then(data => setProducts([...data]))
+      .catch(error => console.error(error))
+      .finally(() => console.log("Requisição finalizada."))
+    }, [])
 
   return (
     <div className="App">
